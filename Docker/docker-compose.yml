@@ -1,0 +1,12 @@
+services:
+  db:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    restart: always
+    hostname: documentDB
+    container_name: role_documentdb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongo_park
+      MONGO_INITDB_ROOT_PASSWORD: mongo_park
+      MONGO_INITDB_DATABASE: mongo_park_db
