@@ -13,7 +13,7 @@ def connect_to_database():
         password = quote_plus("mongo_park")
         authsource = "admin"
 
-        uri = f"mongodb://{username}:{password}@{host}:{port}/?authSource=adm{authsource}"
+        uri = f"mongodb://{username}:{password}@{host}:{port}/?authSource={authsource}"
 
 
         client = MongoClient(uri)
