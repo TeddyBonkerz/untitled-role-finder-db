@@ -24,7 +24,7 @@ def connect_to_database():
         role_db = client[db_name]
         role_collection = role_db.get_collection(db_collection)
 
-        with open("job_roles_dump.json", 'r') as file:
+        with open("src/job_roles_dump.json", 'r') as file:
             roles = json.load(file)
         
         # Validate JSON structure
@@ -34,7 +34,7 @@ def connect_to_database():
         result = role_collection
 
         result = role_collection.insert_many(roles)
-        print(f"Inserted document ID: {result.inserted_id}")
+        # print(f"Inserted document ID: {result.inserted_id}")
 
     except Exception as e:
         raise Exception(
