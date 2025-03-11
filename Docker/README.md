@@ -7,5 +7,6 @@
 To log into the container
 - docker exec -it role_documentdb bash
 - mongosh "mongodb://{username}:{password}@localhost:27017/?authSource={authsource}
+mongosh mongodb://mongo_park:mongo_park@localhost:27017/?authSource=admin
 
 Then run mongodb commands as needed.
